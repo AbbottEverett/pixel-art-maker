@@ -1,0 +1,41 @@
+.active {
+  background-color: red;
+}
+
+.canvas {
+  width: 400px;
+  height: 400px;
+  /* Resolves white-space between inline-block pixel divs */
+  font-size: 0;
+}
+
+.pixel {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+}
+
+.palette {
+  margin-top: 15px;
+  width: 400px;
+  height: 100px;
+  /* Resolves inherent white-space between inline-block
+  elements that don't follow the CSS box model */
+  font-size: 0;
+}
+
+.pixel-large {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+}
+
+/* Colors */
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
