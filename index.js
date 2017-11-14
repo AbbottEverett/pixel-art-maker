@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   let canvas = document.querySelector('.canvas');
   let palette = document.querySelector('.palette');
-  let currentColor = 'red';
+  let currentColor = '';
 
   canvas.addEventListener('click', (e) => {
     let pixel = e.target;
@@ -11,9 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (pixelColor !== currentColor) {
       pixel.classList.remove(pixelColor);
       pixel.classList.add(currentColor);
+    } else if (pixelColor === currentColor) {
+      pixel.classList.remove(pixelColor);
     }
   });
+
   palette.addEventListener('click', (e) => {
-    currentColor = e.target.classList[0];
+    let selectedColor = e.target;
+    if (selectedColor.id !== 'selected') {
+      var oldColor = document.getElementById('selected');
+      if (oldColor) {
+        oldColor.setAttribute('id', '');
+      }
+      selectedColor.setAttribute('id', 'selected');
+      currentColor = selectedColor.classList[0];
+    }
   });
+
 });
