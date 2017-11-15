@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin-top: 75px;
+  text-align: center;
+}
+
 #selected {
   outline: 4px solid #333;
 }
@@ -10,7 +15,6 @@
   font-size: 0;
   outline: 2px solid black;
   margin: 0 auto;
-  margin-top: 75px;
 }
 
 .palette {
